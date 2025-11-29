@@ -1,0 +1,120 @@
+/* Parent container for full page layout */
+.signup-page-container {
+  display: flex;       /* left-right layout */
+  height: 100vh;       /* full screen height */
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.left-image {
+  flex: 1;                                /* Left panel occupy full flex height */
+  background-image: url('../images/hackathon2.jpg');
+  background-size: cover;                  /* Full area cover without distortion */
+  background-position: center;             /* Center the image */
+  background-repeat: no-repeat;
+  min-height: 100vh;                       /* Full viewport height */
+}
+
+/* Right side signup form wrapper */
+.right-signup-form {
+  flex: 1;                                 /* half page width */
+  display: flex;
+  justify-content: center;                 /* horizontally center form */
+  align-items: center;                     /* vertically center form */
+  background-color: #0a0a0a;              /* black background */
+  padding: 20px;
+}
+
+/* Signup form container */
+.signup-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background: #0a0a0a;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.signup-container h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.signup-container label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: bold;
+  color: white;
+}
+
+.signup-container input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #00bfff;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.signup-container input:focus {
+  border-color: #00e5ff;
+  box-shadow: 0 0 5px #00e5ff;
+  outline: none;
+}
+
+.signup-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  background: #00bfff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signup-container button:hover {
+  background: #00e5ff;
+  color: #000000;
+}
+
+.signup-container p {
+  margin-top: 10px;
+  text-align: center;
+  color: #ff4d4d;
+}
+
+/* Password field with eye icon */
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+.password-field input {
+  width: 100%;
+  padding: 12px 40px 12px 12px; /* top right bottom left */
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #00bfff;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;           /* icon right side */
+  top: 50%;              /* vertical center */
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: white;          
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}

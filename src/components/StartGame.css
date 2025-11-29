@@ -1,0 +1,67 @@
+/* Background Container */
+.container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: url("../images/bubble.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;  /* Button bottom side */
+  padding-bottom: 80px;   /* Button ko thoda upar uthaya */
+}
+
+/* Start Game Button */
+.start-btn {
+  background: linear-gradient(135deg, #00d0ff, #007bff);
+  color: white;
+  padding: 22px 55px;
+  margin-bottom: 50px;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 60px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(0, 180, 255, 0.7);
+  transition: 0.25s ease-in-out;
+  letter-spacing: 1px;
+}
+
+.start-btn:hover {
+  transform: scale(1.12);
+  background: linear-gradient(135deg, #00f0ff, #008cff);
+  box-shadow: 0 0 40px rgba(0, 220, 255, 0.9);
+}
+
+/* Bubble */
+.bubble {
+  position: absolute;
+  bottom: 20px;
+  border-radius: 50%;
+  animation: riseUp 2.5s ease-out forwards, pop 0.3s ease-out 2.5s forwards;
+}
+
+/* Upward Movement */
+@keyframes riseUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-650px) scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* Bubble Pop */
+@keyframes pop {
+  0% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}

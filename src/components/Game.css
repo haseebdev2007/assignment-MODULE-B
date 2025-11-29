@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f0f8ff;
+  overflow: hidden;
+}
+
+.game-wrapper {
+  height: 100vh;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.game-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #0077cc;
+}
+
+.game-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.score-box,
+.lives-box {
+  background: #eaf6ff;
+  padding: 7px 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.btn {
+  padding: 7px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.canvas-box {
+  flex: 1;
+  margin-top: 12px;
+  background: #cdeeff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.instructions {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 15px;
+  opacity: 0.8;
+}

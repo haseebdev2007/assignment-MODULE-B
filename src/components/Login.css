@@ -1,0 +1,165 @@
+/* Parent container for full page layout */
+.login-page-container {
+  display: flex;           /* left-right layout */
+  height: 100vh;           /* full screen height */
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Left side full image */
+.left-image {
+  flex: 1;                                /* Left panel occupy full flex height */
+  background-image: url('../images/hackathon2.jpg');
+  background-size: cover;                  /* Full area cover without distortion */
+  background-position: center;             /* Center the image */
+  background-repeat: no-repeat;
+  min-height: 100vh;                       /* Full viewport height */
+}
+
+/* Right side form wrapper */
+.right-form {
+  flex: 1;                                 /* half page width */
+  display: flex;
+  justify-content: center;                 /* horizontally center login-container */
+  align-items: center;                     /* vertically center login-container */
+  background-color: #0a0a0a;              /* optional: black background */
+  padding: 20px;
+}
+
+/* Login form container */
+.login-container {
+  width: 100%;
+  max-width: 400px;                        /* form width */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 191, 255, 0.5);
+  background-color: #0a0a0a;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Form headings */
+.login-container h2 {
+  text-align: center;
+  color: white; 
+  margin-bottom: 25px;
+  text-shadow: 0 0 8px #00e5ff;
+}
+
+/* Form labels */
+.login-container label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Inputs */
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #00bfff;
+  background-color: #1a1a1a;
+  color: white;
+  transition: 0.3s;
+}
+
+.login-container input:focus {
+  border-color: #00e5ff;
+  box-shadow: 0 0 8px #00e5ff;
+  outline: none;
+}
+
+/* Primary button */
+.login-container .button-primary {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  background: #00bfff;
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #00bfff, 0 0 20px #00e5ff inset;
+}
+
+.login-container .button-primary:hover {
+  background: #00e5ff;
+  color: #000000;
+  box-shadow: 0 0 20px #00e5ff, 0 0 40px #00bfff inset;
+}
+
+/* Secondary button */
+.login-container .button-secondary {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #00bfff;
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 5px #00bfff;
+}
+
+.login-container .button-secondary:hover {
+  background: #00bfff;
+  color: #000000;
+  box-shadow: 0 0 15px #00e5ff, 0 0 30px #00bfff inset;
+}
+
+/* Text & links */
+.login-container span {
+  margin: 10px 0;
+  text-align: center;
+  color: #00bfff;
+}
+
+/* Remember me checkbox */
+.remember-me {
+  display: flex;
+  align-items: center; 
+  margin: 10px 0; 
+  color: #00bfff;
+}
+
+.remember-me input {
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+  accent-color: #00bfff; 
+}
+
+/* Password field */
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+.password-field input {
+  width: 100%;
+  padding: 12px 40px 12px 12px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #00bfff;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* Eye icon for show/hide password */
+.eye-icon {
+  position: absolute;
+  right: 10px;           
+  top: 50%;              
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: white;          
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
